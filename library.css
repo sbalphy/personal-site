@@ -1,42 +1,55 @@
 @font-face {
     font-family: din;
-    src: url(../lexicon/media/fonts/font.din.light.woff);
+    src: url(lexicon/media/fonts/font.din.light.woff);
 }
 
 @font-face {
     font-family: ruhl;
-    src: url(../lexicon/media/fonts/font.ruhl.woff);
+    src: url(lexicon/media/fonts/font.ruhl.woff);
 }
 
 @font-face {
     font-family: input;
-    src: url(../lexicon/media/fonts/font.input.extralight.woff);
+    src: url(lexicon/media/fonts/font.input.extralight.woff);
 }
 
 @font-face {
     font-family: domestic;
-    src: url(../lexicon/media/fonts/font.domestic.pixel.woff);
+    src: url(lexicon/media/fonts/font.domestic.pixel.woff);
+}
+
+@font-face {
+    font-family: paragraphs;
+    src: url(lexicon/media/fonts/Consolas.ttf);
+}
+
+@font-face {
+    font-family: tables;
+    font-size: 20px;
+    src: url(lexicon/media/fonts/Hack-Regular.ttf);
 }
 
 a {
+    font-family: tables;
     text-decoration: none;
-    color: #a1a1a1;
+    color: #C05746;
 }
 
 a:hover, ::selection {
     text-decoration: none;
-    color: #ccc;
-    background-color: #efefef;
+    color: #984134;
+    background-color: #D9CAB3;
 }
 
 h1 {
-    font-family: "din";
+    font-family: input;
     font-size: 12px;
 }
 
 h2 {
-    font-weight: 100;
-    background-color: #efefef;
+    color:#D9CAB3;
+    font-weight: 400;
+    background-color: #41521F;
 }
 
 hr {
@@ -50,6 +63,8 @@ hr {
 }
 
 summary {
+    font-family: tables;
+    color:#41521F;
     outline: none;
 }
 
@@ -58,12 +73,6 @@ img {
     border: 1px solid #ccc;
     width: auto;
     height: auto;
-}
-
-mark {
-    background: #ccc;
-    color:#fff;
-    font-family: "input";
 }
 
 table, th, td {
@@ -82,7 +91,7 @@ tt {
 
 
 body {
-    background: hsla(25, 3%, 78%, 1);
+    background: #E7C9A9;
     /*background-image: radial-gradient(hsla(0, 0%, 24%, 1) 5%, transparent 0);*/
     background-size: 15px 15px;
 }
