@@ -30,14 +30,13 @@
 }
 
 a {
-    font-family: tables;
     text-decoration: none;
     color: #C05746;
 }
 
 a:hover, ::selection {
     text-decoration: none;
-    color: #984134;
+    color: #683128;
     background-color: #D9CAB3;
 }
 
@@ -47,8 +46,9 @@ h1 {
 }
 
 h2 {
+    font-family: input;
     color:#D9CAB3;
-    font-weight: 400;
+    font-weight: 1;
     background-color: #41521F;
 }
 
