@@ -6,7 +6,6 @@ from anytree.exporter import JsonExporter
 from anytree.importer import JsonImporter
 from anytree.resolver import Resolver
 import sys
-from tabulate import tabulate
 from itertools import zip_longest
 from jinja2 import Environment, FileSystemLoader
 
@@ -14,11 +13,13 @@ def addnode(resolve, root, path):
     path_parent, name_child = path.rsplit("/", 1)
     parent = resolve.get(root, path_parent)
     child = Node(name_child, parent=parent)
+    print(f"Created node {child.name}")
     return
 
 def removenode(resolve, root, path):
     target = resolve.get(root, path)
     target.parent = None
+    print(f"Removed node {target.name}")
     return
 
 def createpage(resolve, root, path):
@@ -38,7 +39,10 @@ def createpage(resolve, root, path):
     )
     with open(filename, mode="w", encoding="utf-8") as page:
         page.write(content)
-        print(f"Page {filename} created.")
+    print(f"Page {filename} created.")
+    print("The following pages must be updated:")
+    for relative in [child for child in target.parent.children] + [target.parent]:
+        print(f"    {relative.name}.html") 
     return
 
 def transpose(table):

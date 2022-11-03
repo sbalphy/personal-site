@@ -5,8 +5,8 @@ representando onde a página atual está nessa hierarquia no topo de cada págin
 artista deuveir, a partir da qual esse repositório foi forkado.
 
 TODO:
-1. Automatização de criação de páginas
-	Gostaria de automatizar a criação de páginas usando uma biblioteca de templating como o Jinja ou o Django.
-
-2. Visual
+1. Visual
 	Ainda não estou muito feliz com o visual das páginas.
+
+2. Automatização de updates em páginas
+	Talvez seja pedir demais.
