@@ -1,44 +1,38 @@
-@font-face {
-    font-family: din;
-    src: url(lexicon/media/fonts/font.din.light.woff);
+/* variáveis globais são declaradas aqui */
+:root {
+    /* definição do esquema de cores da página */
+    --main-bg: #E7C9A9;
+    --side-bg: #D6A36D;
+    --details: #41521F;
+    --links:   #C05746;
+    --link-hover: #683128;
+    --link-bg: #D9CAB3;
 }
 
-@font-face {
-    font-family: ruhl;
-    src: url(lexicon/media/fonts/font.ruhl.woff);
-}
-
+/* fontes */
 @font-face {
     font-family: input;
     src: url(lexicon/media/fonts/font.input.extralight.woff);
 }
 
 @font-face {
-    font-family: domestic;
-    src: url(lexicon/media/fonts/font.domestic.pixel.woff);
-}
-
-@font-face {
-    font-family: paragraphs;
-    src: url(lexicon/media/fonts/Consolas.ttf);
-}
-
-@font-face {
     font-family: tables;
-    font-size: 20px;
     src: url(lexicon/media/fonts/Hack-Regular.ttf);
 }
 
+/* links */
 a {
     text-decoration: none;
-    color: #C05746;
+    color: var(--links);
 }
 
 a:hover, ::selection {
     text-decoration: none;
-    color: #683128;
-    background-color: #D9CAB3;
+    color: var(--link-hover);
+    background-color: var(--link-bg);
 }
+
+/* headers level 1, 2, add more if necessary */
 
 h1 {
     font-family: input;
@@ -47,51 +41,27 @@ h1 {
 
 h2 {
     font-family: input;
-    color:#D9CAB3;
-    font-weight: 1;
-    background-color: #41521F;
+    color: var(--details);
+    background-size: cover;
 }
 
+/* horizontal separators */
 hr {
-    display: block;
-    height: 1px;
     border: 0;
-    border-width:0;
-    border-top: 1px dotted #fff;
-    margin: 1em 0;
-    padding: 0; 
+    height: 1px;
+    background-image:linear-gradient(to right, var(--main-bg), 25%, var(--side-bg), 75%, var(--main-bg));
 }
 
+/* header for details objects (the ones where you click and it hides or reveals text) */
 summary {
     font-family: tables;
-    color:#41521F;
+    color:var(--details);
     outline: none;
 }
 
-img {
-    display: grid;
-    border: 1px solid #ccc;
-    width: auto;
-    height: auto;
-}
-
-table, th, td {
-    border: 0px;
-}
-
-tt {
-    color: #3d3d3d; -webkit-font-smoothing: none;
-}
-
-.image {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-}
-
+/* main body of text */
 
 body {
-    background: #E7C9A9;
-    /*background-image: radial-gradient(hsla(0, 0%, 24%, 1) 5%, transparent 0);*/
-    background-size: 15px 15px;
+    background: linear-gradient(to left, var(--side-bg), 1%, var(--main-bg), 99%, var(--side-bg));
+    background-size: cover;
 }
