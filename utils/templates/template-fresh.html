@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+<link rel="icon" href="favicon.gif" type="image/png">  
+<head>
+	<title>{{name}}</title>
+	<link rel="stylesheet" href="library.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<tt>
+<body>
+	<header><a href="./index.html"><h1>home</h1></a></header>
+	<details open>
+		<summary>{{path}}</summary>
+		<br>
+		<table style="width:100%;">
+            {% for row in table %}
+            <tr>
+                {% for item in row %}
+                {% if item is none %}
+                <td></td>
+                {% elif item in pathlist %}
+                <td><a href="./{{item}}.html">{{item}}</a>/</td>
+                {% else %}
+                <td><a href="./{{item}}.html">{{item}}</a></td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+		</table>
+		<br>
+	</details>
+	<!--content-->
+	<hr>
+	<h2>SUBTÍTULO</h2>
+	<hr>
+    {% for child in children %}
+	<details open>
+		<summary><i><a href="./{{child}}.html">{{child}}</a></i></summary>
+	</details>
+	<br>
+    {% endfor %}
+	<hr>
+	<!--content-->
+	<p align="left"><a href="../about.html">about</a> | <a href="mailto:joelsm@usp.br">contact</a> | <a href="https://github.com/sbalphy/personal-site">source</a></p>
+</body>
+</tt>
