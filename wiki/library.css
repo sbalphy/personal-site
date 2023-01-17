@@ -64,4 +64,9 @@ summary {
 body {
     background: linear-gradient(to left, var(--side-bg), 1%, var(--main-bg), 99%, var(--side-bg));
     background-size: cover;
+    display: block;
+    max-width: 150ch;
+    padding: 2ch;
+    margin-top: 2ch;
+    border: 5px double var(--details);
 }
