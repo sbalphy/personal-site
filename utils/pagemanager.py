@@ -56,11 +56,16 @@ def updatepage(resolve, root, path):
     target = resolve.get(root, path)
     pathlist = path.split("/")
     filename = f"{target.name}.html"
+    try:
+        originalcontent = fetchcontent(f"../wiki/{filename}")
+    except FileNotFoundError:
+        print(f"File {filename} not found. Making a brand new page.")
+        createpage(resolve, root, path)
+        return
     table = [[child.name for child in n.children] for n in target.path][1:]
     table = transpose(table)
     environment = Environment(loader=FileSystemLoader("templates/"), trim_blocks=True, lstrip_blocks=True)
     template = environment.get_template("template-renew.html")
-    originalcontent = fetchcontent(f"../wiki/{filename}")
     content = template.render(
         name = target.name,
         path = path,
