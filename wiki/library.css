@@ -59,6 +59,10 @@ summary {
     outline: none;
 }
 
+/* */
+p {
+    text-indent: 2ch;
+}
 /* main body of text */
 
 body {
