@@ -1,12 +1,13 @@
 /* variáveis globais são declaradas aqui */
 :root {
     /* definição do esquema de cores da página */
-    --main-bg: #E7C9A9;
-    --side-bg: #D6A36D;
-    --details: #41521F;
-    --links:   #C05746;
-    --link-hover: #683128;
-    --link-bg: #D9CAB3;
+    --main-bg: #5A0B4D;
+    --side-bg: #5A0B4D;
+    --text:#BACAFE;
+    --details:#F5ECCD;
+    --links:#F93943;
+    --link-hover:#B2060E;
+    --link-bg:#987196;
 }
 
 /* fontes */
@@ -35,12 +36,12 @@ a:hover, ::selection {
 /* headers level 1, 2, add more if necessary */
 
 h1 {
-    font-family: input;
+    font-family: monospace;
     font-size: 12px;
 }
 
 h2 {
-    font-family: input;
+    font-family: monospace;
     color: var(--details);
     background-size: cover;
 }
@@ -69,8 +70,10 @@ body {
     background: linear-gradient(to left, var(--side-bg), 1%, var(--main-bg), 99%, var(--side-bg));
     background-size: cover;
     display: block;
-    max-width: 150ch;
+    border: 1px solid var(--details);
+    color: var(--text);
+    margin: auto;
+    max-width: 70ch;
     padding: 2ch;
     margin-top: 2ch;
-    border: 5px double var(--details);
 }
