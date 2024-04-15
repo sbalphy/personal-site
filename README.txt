@@ -1,7 +1,7 @@
 Projeto de site pessoal.
 
 Esse site consiste num site normal (about.html e curriculo.html) e uma wiki (pasta wiki) que pretendo expandir no futuro.
-O design das páginas da wiki foi baseado na página pessoal do artista Oliver Shore, a partir da qual esse repositório foi forkado.
+O design das páginas da wiki foi baseado na página pessoal do artista Oliver Shore: https://github.com/deuveir/deuveir.github.io
 
 A pasta utils contém um utilitário para gerenciamento das páginas da wiki, o pagemanager.py.
 Ele requer Python e as bibliotecas anytree e jinja2. A sua função é gerenciar a hierarquia de diretórios da wiki (salva em files.json)
