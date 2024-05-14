@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>wiki pessoal - Joel Soares Moreira</title>
+  <link>https://wiki.cecm.usp.br/~sunny/</link>
+  <description>Página pessoal.</description>
+  <item>
+    <title>Added RSS</title>
+    <link>https://wiki.cecm.usp.br/~sunny/feed</link>
+    <description>A página agora possui uma feed RSS.</description>
+    <pubDate>Tue, 14 May 2024 19:20:00 -0300</pubDate>
+  </item>
+</channel>
+</rss> 
