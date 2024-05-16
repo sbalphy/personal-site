@@ -26,7 +26,7 @@ def main():
     channel.append(new_item)
     ET.indent(tree)
 
-    tree.write(feed)
+    tree.write(feed, encoding="UTF-8", xml_declaration=True)
 
 
 if __name__ == "__main__":
