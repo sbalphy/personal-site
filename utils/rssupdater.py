@@ -10,7 +10,7 @@ def main():
     title = ET.Element("title")
     title.text = input("Title of the update: \n")
     link = ET.Element("link")
-    link.text = f"https://wiki.cecm.usp.br/~sunny/wiki/{modified}.html"
+    link.text = f"https://wiki.cecm.usp.br/~sunny/{modified}.html"
     description = ET.Element("description")
     description.text = input("Description of the update (content of modification): \n")
     pubDate = ET.Element("pubDate")
