@@ -10,7 +10,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
         </head>
         <body>
-            <header>
+            <section>
                 <h1>RSS Feed</h1>
                 <h2>
                     <a hreflang="en" target="_blank">
@@ -28,8 +28,6 @@
                     Site principal
                 </a>
                 <hr/>
-            </header>
-            <main>
                 <xsl:for-each select="/rss/channel/item">
                     <article>
                         <h3>
@@ -49,7 +47,7 @@
                         </footer>
                     </article>
                 </xsl:for-each>
-            </main>
+            </section>
         </body>
     </html>
 </xsl:template>
