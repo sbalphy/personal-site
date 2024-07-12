@@ -14,31 +14,27 @@
                 </a>
             </h2>
             <p><xsl:value-of select="/rss/channel/description"/></p>
-            <a hreflang="en" target="_blank">
-                <xsl:attribute name="href">
-                    <xsl:value-of select="/rss/channel/link"/>
-                </xsl:attribute>
-                Site principal
-            </a>
             <hr/>
             <xsl:for-each select="/rss/channel/item">
-                <article>
-                    <h3>
-                        <a hreflang="en" target="_blank">
-                            <xsl:attribute name="href">
-                                <xsl:value-of select="link"/>
-                            </xsl:attribute>
-                            <xsl:value-of select="title"/>
-                        </a>
-                    </h3>
-                    <p><xsl:value-of select="description"/></p>
-                    <footer>
-                        Publicado:
-                        <time>
-                            <xsl:value-of select="pubDate"/>
-                        </time>
-                    </footer>
-                </article>
+                <xsl:if test="not (position() > 5)">
+                    <article>
+                        <h3>
+                            <a hreflang="en" target="_blank">
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="link"/>
+                                </xsl:attribute>
+                                <xsl:value-of select="title"/>
+                            </a>
+                        </h3>
+                        <p><xsl:value-of select="description"/></p>
+                        <footer>
+                            <b>Publicado:</b>
+                            <time>
+                                <xsl:value-of select="pubDate"/>
+                            </time>
+                        </footer>
+                    </article>
+                </xsl:if>
             </xsl:for-each>
         </section>
     </html>
