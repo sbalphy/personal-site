@@ -3,4 +3,4 @@
 python rssupdater.py
 
 # deploy files to server via rsync
-rsync -Cav --exclude={'utils','README.txt'} -e "ssh -p 14641" ../ sunny@fleming.cecm.usp.br:public_html
+rsync -Cav --exclude={'utils','README.txt','wiki/jpop.html','wiki/manga.html'} -e "ssh -p 14641" ../ sunny@fleming.cecm.usp.br:public_html

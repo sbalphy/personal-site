@@ -16,6 +16,7 @@
             <p><xsl:value-of select="/rss/channel/description"/></p>
             <hr/>
             <xsl:for-each select="/rss/channel/item">
+                <xsl:sort select="position()" data-type="number" order="descending"/>
                 <xsl:if test="not (position() > 5)">
                     <article>
                         <h3>
